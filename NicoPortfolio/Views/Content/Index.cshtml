@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Security.Claims
+
+<div class="content">
+    @if (User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Add A New Item", "New")
+        <form id="stock-form">
+            <label for="description" id="stock-label"></label>
+            <input type="text" id="description" value="0" />
+            <button type="submit">Go!</button>
+        </form>
+    }
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Test</th>
+            <th>Test</th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>Manager Actions</th>}
+        </tr>
+        <tbody class="tbody"></tbody>
+
+    </table>
+</div>
+
+<script>
+
+    //ajax call
+    $.ajax({
+        type: 'GET',
+        url: '@Url.Action("HelloAjax")', success: function (result) {
+            result.forEach(function (content) {
+                console.log("RESULT: " + result)
+                $(".tbody").append(
+                    "<tr>" +
+                    "<td>" + content.title + "</td>" +
+                    "<td>" + content.description + "</td>" +
+                    "<td>" +
+                    "<a href='Content/Add/" + content.contentId + "'>Edit Content</a> | " +
+                    "<a href='Content/Delete/" + content.contentId + "'>Delete</a>" +
+                    "</td>" +
+                    "</tr>"
+                )
+            })
+        }
+    });
+</script>
