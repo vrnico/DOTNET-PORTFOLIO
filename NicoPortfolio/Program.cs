@@ -22,7 +22,20 @@ namespace NicoPortfolio
                 .UseApplicationInsights()
                 .Build();
 
-   
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                try
+                {
+                    var context = services.GetRequiredService<NicoPortfolioDbContext>();
+                    DbInitializer.Initialize(context);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
 
             host.Run();
         }

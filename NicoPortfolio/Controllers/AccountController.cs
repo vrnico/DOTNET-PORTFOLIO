@@ -11,7 +11,7 @@ using NicoPortfolio.ViewModels;
 using NicoPortfolio.Data;
 
 
-namespace WeinerSales.Controllers
+namespace NicoPortfolio.Controllers
 {
     public class AccountController : Controller
     {

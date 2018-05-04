@@ -13,7 +13,10 @@ namespace NicoPortfolio.Models
 
     public class NicoPortfolioDbContext : IdentityDbContext<AppUser>
     {
-      
+
+        public virtual DbSet<Comment> Comment { get; set; }
+        public virtual DbSet<Content> Content { get; set; }
+
 
 
 

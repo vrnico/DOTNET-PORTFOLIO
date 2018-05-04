@@ -20,8 +20,7 @@ namespace NicoPortfolio.Data
 
             var roles = new IdentityRole[]
             {
-                new IdentityRole() { Name = "Admin" },
-                new IdentityRole() { Name = "User" }
+                new IdentityRole() { Name = "Admin" }
 
             };
 

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace WeinerSales.Models
+namespace NicoPortfolio.Models
 {
     [Table("Content")]
     public class Content
