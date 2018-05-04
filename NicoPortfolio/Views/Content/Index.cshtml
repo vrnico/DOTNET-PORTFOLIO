@@ -8,7 +8,7 @@
 <div class="content">
     @if (User.IsInRole("Admin"))
     {
-        @Html.ActionLink("Add A New Item", "New")
+        @Html.ActionLink("Add New Content", "New")
         <form id="stock-form">
             <label for="description" id="stock-label"></label>
             <input type="text" id="description" value="0" />
@@ -22,7 +22,7 @@
             <th>Test</th>
             @if (User.IsInRole("Admin"))
             {
-                <th>Manager Actions</th>}
+                <th>Admin Actions</th>}
         </tr>
         <tbody class="tbody"></tbody>
 

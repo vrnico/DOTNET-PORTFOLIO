@@ -59,6 +59,8 @@ namespace NicoPortfolio.Controllers
         public IActionResult AddConfirmed(int id)
         {
             Content content = _db.Content.FirstOrDefault(i => i.ContentId == id);
+            content.Title = Request.Form["title"];
+            content.Description = Request.Form["description"];
             _db.Entry(content).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index");
