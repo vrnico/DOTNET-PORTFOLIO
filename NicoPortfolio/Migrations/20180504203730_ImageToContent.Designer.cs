@@ -8,9 +8,10 @@ using NicoPortfolio.Models;
 namespace NicoPortfolio.Migrations
 {
     [DbContext(typeof(NicoPortfolioDbContext))]
-    partial class NicoPortfolioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180504203730_ImageToContent")]
+    partial class ImageToContent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.5");

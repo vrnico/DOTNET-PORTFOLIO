@@ -5,29 +5,29 @@
 
 @using System.Security.Claims
 
+<h1>Portfolio Admin Content</h1>
 <div class="content">
     @if (User.IsInRole("Admin"))
     {
-        @Html.ActionLink("Add New Content", "New")
-        <form id="stock-form">
-            <label for="description" id="stock-label"></label>
-            <input type="text" id="description" value="0" />
-            <button type="submit">Go!</button>
-        </form>
-    }
-    <table class="table">
-        <tr>
-            <th>Name</th>
-            <th>Test</th>
-            <th>Test</th>
-            @if (User.IsInRole("Admin"))
-            {
-                <th>Admin Actions</th>}
-        </tr>
-        <tbody class="tbody"></tbody>
+        <br />
+    <button class="btn-success">@Html.ActionLink("Add A New Item", "New")</button>
+    <br />
+    <br />
 
-    </table>
-</div>
+    }
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Image</th>
+                @if (User.IsInRole("Admin"))
+                {
+                    <th>Admin Actions</th>}
+            </tr>
+            <tbody class="tbody"></tbody>
+
+        </table>
+    </div>
 
 <script>
 
@@ -40,6 +40,7 @@
                 $(".tbody").append(
                     "<tr>" +
                     "<td>" + content.title + "</td>" +
+                    "<td><img src='" + content.image + "'></td>" +
                     "<td>" + content.description + "</td>" +
                     "<td>" +
                     "<a href='Content/Add/" + content.contentId + "'>Edit Content</a> | " +
