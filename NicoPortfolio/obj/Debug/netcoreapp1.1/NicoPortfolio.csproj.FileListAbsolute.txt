@@ -1,0 +1,11 @@
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\obj\Debug\netcoreapp1.1\NicoPortfolio.csprojResolveAssemblyReference.cache
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\obj\Debug\netcoreapp1.1\NicoPortfolio.csproj.CoreCompileInputs.cache
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\obj\Debug\netcoreapp1.1\NicoPortfolio.AssemblyInfoInputs.cache
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\obj\Debug\netcoreapp1.1\NicoPortfolio.AssemblyInfo.cs
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\bin\Debug\netcoreapp1.1\NicoPortfolio.deps.json
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\bin\Debug\netcoreapp1.1\NicoPortfolio.runtimeconfig.json
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\bin\Debug\netcoreapp1.1\NicoPortfolio.runtimeconfig.dev.json
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\bin\Debug\netcoreapp1.1\NicoPortfolio.dll
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\bin\Debug\netcoreapp1.1\NicoPortfolio.pdb
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\obj\Debug\netcoreapp1.1\NicoPortfolio.dll
+C:\Users\nicod\source\repos\NicoPortfolio\NicoPortfolio\obj\Debug\netcoreapp1.1\NicoPortfolio.pdb
