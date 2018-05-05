@@ -7,7 +7,7 @@
 #### Description
 A personal portfolio template with features like blog posts and comments section.
 ***
-[VISIT THE LIVE DEMO](https://google.com)
+[VISIT THE LIVE DEMO](http://nicodaunt.com)
 ***
 
 ## Installation (build your own portfolio!)
