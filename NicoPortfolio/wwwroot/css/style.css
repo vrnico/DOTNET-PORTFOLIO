@@ -175,7 +175,11 @@ h1 {
 /* =============================================================
   ABOUT SECTION STYLES
  ============================================================ */
-
+#about-sec {
+    background-color: white;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
 
 #about-sec .social-icon {
     padding: 10px 0px 30px 0px;
@@ -195,18 +199,18 @@ h1 {
 }
 
 #skill-sec {
-    background: url(../img/skill.jpg) no-repeat center center;
+    background-color: #6da8b4;
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
-    color: #fff;
+    color: black;
     background-attachment: fixed;
 }
 
     #skill-sec .overlay {
-        padding-top: 50px;
+        padding-top: 2em;
         background: url(../img/overlays/15.png);
-        min-height: 450px;
+        min-height: 10em;
     }
 
 .chart {
@@ -243,6 +247,8 @@ h1 {
 .board {
     width: 85%;
     margin: 0px auto;
+    background: black;
+    color: white;
 }
 
     .board .nav-tabs {
@@ -462,6 +468,13 @@ span.round-tabs.five {
 }
 
 
+#resume-sec {
+    background-color: white;
+    padding-left: 2em;
+    padding-top: 2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
 /*=====================================
   TESTIMONIALS STYLES
     ===================================*/
@@ -581,8 +594,8 @@ span.round-tabs.five {
   HIRE STYLES
     ===================================*/
 #hire-sec {
-    background: url('https://media.giphy.com/media/SHUu78CIqq4FO/giphy.gif') no-repeat center center;
-    padding: 0;
+    background-color: black;
+    padding-left: 2em;
     -webkit-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
@@ -590,7 +603,7 @@ span.round-tabs.five {
 }
 
     #hire-sec .overlay {
-        background: hsla(120, 60%, 70%, 0.3);
+
         min-height: 570px;
     }
 
