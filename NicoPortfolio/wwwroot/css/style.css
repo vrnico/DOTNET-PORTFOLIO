@@ -1,7 +1,7 @@
 ﻿
 body {
     font-family: 'Source Code Pro', monospace;
-    background-image: url('https://media3.giphy.com/avatars/jameszanoni/3pc2FTVOdC8Q.gif');
+    background: black;
     padding-top: 50px;
 }
 
@@ -199,12 +199,19 @@ h1 {
 }
 
 #skill-sec {
-    background-color: #6da8b4;
+    background-image: url('https://media.giphy.com/media/26tPbLsr9oE72erjG/giphy.gif');
     padding: 0;
     -webkit-background-size: cover;
     background-size: cover;
     color: black;
     background-attachment: fixed;
+    margin-top: 2em;
+}
+
+#skill-sec a {
+    text-decoration: none;
+    color: red;
+    background: black;
 }
 
     #skill-sec .overlay {
