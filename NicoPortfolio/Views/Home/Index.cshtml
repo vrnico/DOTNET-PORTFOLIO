@@ -239,12 +239,12 @@
                     <hr />
                     @using (Html.BeginForm("SendMessage", "Home", FormMethod.Post))
     {
-                @Html.LabelFor(model => model.To)
-                @Html.TextBoxFor(model => model.To)
-                @Html.LabelFor(model => model.From)
-                @Html.TextBoxFor(model => model.From)
-                @Html.LabelFor(model => model.Body)
-                @Html.TextBoxFor(model => model.Body)
+                @Html.HiddenFor(model => model.To)
+                @Html.HiddenFor(model => model.From)
+                <br />
+                <div class="contact-form">
+                @Html.TextAreaFor(model => model.Body, new { style = "width: 25em; height: 20em;", placeholder = "Whatever you write here will be sent directly to Nico's Cell phone via SMS" })
+                </div>
                 <input type="submit" value="Send!" />
 }
 

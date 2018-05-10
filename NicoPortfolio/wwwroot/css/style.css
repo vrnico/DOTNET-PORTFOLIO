@@ -5,6 +5,10 @@ body {
     padding-top: 50px;
 }
 
+textarea {
+    color: black;
+}
+
 .pad-top-bottom {
     padding-top: 20px;
     padding-bottom: 30px;
