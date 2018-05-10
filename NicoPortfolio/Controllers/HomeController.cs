@@ -29,6 +29,18 @@ namespace NicoPortfolio.Controllers
             return View();
         }
 
-     
+        public IActionResult SendMessage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SendMessage(Message newMessage)
+        {
+            newMessage.Send();
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

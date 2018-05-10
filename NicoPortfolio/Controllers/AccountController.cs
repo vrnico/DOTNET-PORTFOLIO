@@ -74,5 +74,11 @@ namespace NicoPortfolio.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index");
         }
+
+        public IActionResult GetMessages()
+        {
+            var allMessages = Message.GetMessages();
+            return View(allMessages);
+        }
     }
 }

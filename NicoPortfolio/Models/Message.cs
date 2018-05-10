@@ -19,8 +19,8 @@ namespace NicoPortfolio.Models
         public static List<Message> GetMessages()
         {
             var client = new RestClient("https://api.twilio.com/2010-04-01");
-            var request = new RestRequest("Accounts/{{Account SID}}/Messages.json", Method.GET);
-            client.Authenticator = new HttpBasicAuthenticator("{{Account SID}}", "{{Auth Token}}");
+            var request = new RestRequest("Accounts/AC2c570ee852689bf0f0f8ee3a65e5585b/Messages.json", Method.GET);
+            client.Authenticator = new HttpBasicAuthenticator("AC2c570ee852689bf0f0f8ee3a65e5585b", "a82adc59b15c9002efc9f287587750db");
             var response = new RestResponse();
             Task.Run(async () =>
             {
@@ -34,11 +34,11 @@ namespace NicoPortfolio.Models
         public void Send()
         {
             var client = new RestClient("https://api.twilio.com/2010-04-01");
-            var request = new RestRequest("Accounts/{{Account SID}}/Messages", Method.POST);
+            var request = new RestRequest("Accounts/AC2c570ee852689bf0f0f8ee3a65e5585b/Messages", Method.POST);
             request.AddParameter("To", To);
             request.AddParameter("From", From);
             request.AddParameter("Body", Body);
-            client.Authenticator = new HttpBasicAuthenticator("{{Account SID}}", "{{Auth Token}}");
+            client.Authenticator = new HttpBasicAuthenticator("AC2c570ee852689bf0f0f8ee3a65e5585b", "a82adc59b15c9002efc9f287587750db");
             client.ExecuteAsync(request, response => {
                 Console.WriteLine(response.Content);
             });
