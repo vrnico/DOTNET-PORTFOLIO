@@ -2,29 +2,52 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @using System.Security.Claims
+@model NicoPortfolio.Models.Content
 
-<h2>PORTFOLIO ADMIN</h2>
+<div class="container" ng-app="app" ng-controller="ContentCtrl">
+    <h2>PORTFOLIO ADMIN </h2>
 
 
 
-@if (User.Identity.IsAuthenticated)
-{
-    <h1>Hello @User.Identity.Name</h1>
-    @using (Html.BeginForm("LogOff", "Account"))
+    @if (User.Identity.IsAuthenticated)
     {
-        <input type="submit" class="btn btn-default" value="Log out" />
+        <h1>Hello @User.Identity.Name</h1>
+        @using (Html.BeginForm("LogOff", "Account"))
+        {
+            <input type="submit" class="btn btn-default" value="Log out" />
+        }
+
+        <script type='text/javascript' src='~/ephemeris/build/ephemeris-0.1.0.js' charset='utf-8'></script>
+        <script type='text/javascript'>
+
+var date = {year: 1986, month: 1, day: 1, hours: 1, minutes: 52, seconds: 0};
+
+$const.tlong = -71.10; // longitude
+$const.glat = 42.37; // latitude
+
+$processor.init ();
+
+// sun, mercury, venus, moon, mars, jupiter, saturn, uranus, neptune, pluto, chiron, sirius
+var body = $moshier.body.sun;
+
+$processor.calc (date, body);
+
+console.log(body.position);
+        </script>
     }
-}
-else
-{
-    <br />
-    <br />
-    <div class="btn-lg btn btn-danger">@Html.ActionLink("Register", "Register")</div>
-    <br />
-    <br />
-    <div class="btn-lg btn btn-success">@Html.ActionLink("Log in", "Login")</div>
-    <br />
-    <br />
-    <br />
-}
+    else
+    {
+        <br />
+        <br />
+        <div class="btn-lg btn btn-danger">@Html.ActionLink("Register", "Register")</div>
+        <br />
+        <br />
+        <div class="btn-lg btn btn-success">@Html.ActionLink("Log in", "Login")</div>
+        <br />
+        <br />
+        <br />
+    }
+
+</div>

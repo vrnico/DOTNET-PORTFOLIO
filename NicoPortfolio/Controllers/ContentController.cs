@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NicoPortfolio.Models;
 
+
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace NicoPortfolio.Controllers
@@ -30,6 +31,14 @@ namespace NicoPortfolio.Controllers
             var model = _db.Content.ToList();
             return View(model);
         }
+
+        public IActionResult IndexVM()
+        {
+            var model = _db.Content;
+            return Json(model);
+        }
+
+
 
         [Authorize(Roles = "Admin")]
         public IActionResult New()
