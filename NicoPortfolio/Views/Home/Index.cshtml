@@ -237,13 +237,17 @@
                 <div class="col-lg-6  col-md-6  col-sm-6">
                     <h2>Send a new message</h2>
                     <hr />
-                    @using (Html.BeginForm())
-                    {
+                    @using (Html.BeginForm("SendMessage", "Home", FormMethod.Post))
+    {
+                @Html.LabelFor(model => model.To)
+                @Html.TextBoxFor(model => model.To)
+                @Html.LabelFor(model => model.From)
+                @Html.TextBoxFor(model => model.From)
+                @Html.LabelFor(model => model.Body)
+                @Html.TextBoxFor(model => model.Body)
+                <input type="submit" value="Send!" />
+}
 
-                        @Html.LabelFor(model => model.Body)
-                        @Html.TextBoxFor(model => model.Body)
-                        <input type="submit" value="Send!" />
-                    }
                 </div>
                 <div class="col-lg-4 col-lg-offset-1  col-md-4  col-md-offset-1 col-sm-4 col-sm-offset-1" id="footer-sec">
                     <p>

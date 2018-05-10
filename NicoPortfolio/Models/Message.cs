@@ -11,8 +11,8 @@ namespace NicoPortfolio.Models
 {
     public class Message
     {
-        public string To = "+14155950819";
-        public string From = "+14155691885";
+        public string To { get; set; }
+        public string From { get; set; }
         public string Body { get; set; }
         public string Status { get; set; }
 
