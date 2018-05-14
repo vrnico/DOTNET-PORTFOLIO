@@ -1,7 +1,21 @@
-﻿@{
+﻿@model IEnumerable<NicoPortfolio.Models.Repo>
+
+@{
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"]</h2>
+<h2>My Top 3 GitHub Repos</h2>
 <h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+@foreach (var repo in Model)
+{
+    <div class="well">
+        <ul class="list-unstyled">
+            <li>Description: @Html.DisplayFor(modelItem => repo.Description)</li>
+            <li>URL: <a href="@Html.DisplayFor(modelItem => repo.Html_Url)">@Html.DisplayFor(modelItem => repo.Html_Url)</a></li>
+            <li>Language: @Html.DisplayFor(modelItem => repo.Language)</li>
+            <li>Number of Stars: @Html.DisplayFor(modelItem => repo.Stargazers_Count)</li>
+        </ul>
+
+    </div>
+
+}

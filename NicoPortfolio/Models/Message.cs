@@ -13,8 +13,15 @@ namespace NicoPortfolio.Models
     {
         public string To = "+14155950819";
         public string From = "+14155691885";
+        public string Name { get; set; }
+        public string Email { get; set; }
         public string Body { get; set; }
         public string Status { get; set; }
+
+        public Message(string Body)
+        {
+            this.Body = Body;
+        }
 
         public static List<Message> GetMessages()
         {
@@ -38,6 +45,9 @@ namespace NicoPortfolio.Models
             request.AddParameter("To", To);
             request.AddParameter("From", From);
             request.AddParameter("Body", Body);
+            request.AddParameter("Email", Email);
+            request.AddParameter("Name", Name);
+
             client.Authenticator = new HttpBasicAuthenticator("AC2c570ee852689bf0f0f8ee3a65e5585b", "a82adc59b15c9002efc9f287587750db");
             client.ExecuteAsync(request, response => {
                 Console.WriteLine(response.Content);

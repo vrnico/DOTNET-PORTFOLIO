@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model NicoPortfolio.Models.Message
+@model NicoPortfolio.ViewModels.MessageViewModel
 <div id="home-sec">
     <div class="overlay">
         <div class="container">
@@ -219,6 +219,9 @@
 
 
 </section>
+
+
+}
 <!-- RESUME SECTION END-->
 <!-- TESTIMONIAL SECTION END-->
 <!-- PORTFOLIO SECTION END-->
@@ -238,15 +241,24 @@
                     <h2>Send a new message</h2>
                     <hr />
                     @using (Html.BeginForm("SendMessage", "Home", FormMethod.Post))
-    {
-                @Html.HiddenFor(model => model.To)
-                @Html.HiddenFor(model => model.From)
-                <br />
-                <div class="contact-form">
-                @Html.TextAreaFor(model => model.Body, new { style = "width: 25em; height: 20em;", placeholder = "Whatever you write here will be sent directly to Nico's Cell phone via SMS" })
-                </div>
-                <input type="submit" value="Send!" />
-}
+                    {
+
+                        <br />
+                        <div class="contact-form">
+                            <div class="row">
+                                @Html.LabelFor(model => model.Name)
+                                @Html.TextBoxFor(model => model.Name)
+                            </div>
+                            <br>
+                            <div class="row">
+                                @Html.LabelFor(model => model.Email)
+                                @Html.TextBoxFor(model => model.Email)
+                            </div>
+                            <br />
+                            @Html.TextAreaFor(model => model.Body, new { style = "width: 25em; height: 20em;", placeholder = "Whatever you write here will be sent directly to Nico's Cell phone via SMS" })
+                        </div>
+                        <input type="submit" value="Send!" />
+                    }
 
                 </div>
                 <div class="col-lg-4 col-lg-offset-1  col-md-4  col-md-offset-1 col-sm-4 col-sm-offset-1" id="footer-sec">

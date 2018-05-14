@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NicoPortfolio.Models;
+using NicoPortfolio.ViewModels;
+
 
 namespace NicoPortfolio.Controllers
 {
@@ -12,14 +14,16 @@ namespace NicoPortfolio.Controllers
     {
         public IActionResult Index()
         {
+            
             return View();
         }
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
-            return View();
+            var threeRepos = Repo.GetRepos();
+ 
+            return View(threeRepos);
         }
 
         public IActionResult Contact()
@@ -35,8 +39,9 @@ namespace NicoPortfolio.Controllers
         }
 
         [HttpPost]
-        public IActionResult SendMessage(Message newMessage)
+        public IActionResult SendMessage(MessageViewModel model)
         {
+            Message newMessage = new Message("message from: " + model.Name + "// email: " + model.Email + "//" + model.Body );
             newMessage.Send();
             return RedirectToAction("Index");
         }
